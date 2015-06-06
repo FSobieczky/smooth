@@ -1,0 +1,21 @@
+smooth.c:
+
+Compile with: 
+  
+   gcc smooth.c -lm -o smooth
+
+
+Usage: smooth <file> n s [<outfile>]
+
+`file' is plain PGM (Magic number P2)
+
+Writes smoothed file in PGM ASCII format to `file.out' or `outfile', if specified.  
+
+ n is an integer greater or equal to 1 = number of iterates 
+     in the smooothing (e.g. 3)
+
+ s is the difference in greyvalue between two neighboring greyvalues 
+   (range: 0 - 255) to be sufficiently different so that the edge connecting 
+   the two vertices is removed from the lattice and no smoothing across it 
+   takes place..
+
